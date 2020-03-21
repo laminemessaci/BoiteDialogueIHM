@@ -11,7 +11,7 @@ public class Fenetre  extends JFrame {
     public Fenetre() {
 
         this.setTitle("Ma JFrame");
-        this.setSize(300,300);
+        this.setSize(200,100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.getContentPane().setLayout(new FlowLayout());
@@ -20,8 +20,13 @@ public class Fenetre  extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 BoiteDialog bd = new BoiteDialog(null, "Coucou", true);
+                ObjetDialogInfo oInfo = bd.showBoiteDialogue();
+                JOptionPane jop = new JOptionPane();
+                jop.showMessageDialog(null, oInfo.toString(),
+                                      "Information Personnage", JOptionPane.INFORMATION_MESSAGE);
             }
         });
+        this.setVisible(true);
 
     }
 

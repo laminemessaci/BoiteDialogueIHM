@@ -19,7 +19,7 @@ public class ObjetDialogInfo {
     public String toString() {
         String str;
         if(this.nom != null && this.sexe != null && this.taille != null && this.age != null && this.cheveux != null){
-            str = "Description de l'objet InfoZDialog";
+            str = "#########Description du Personnage######## \n";
             str += "Nom : " + this.nom + "\n";
             str += "Sexe : " + this.sexe + "\n";
             str += "Age : " + this.age + "\n";
