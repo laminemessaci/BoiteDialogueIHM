@@ -22,6 +22,20 @@ public class Fenetre  extends JFrame {
                 BoiteDialog bd = new BoiteDialog(null, "Coucou", true);
             }
         });
+
+    }
+
+    //Cas où notre BoiteDialog renverra le contenu
+    //D'un JTextField nommé jtf
+    public String showBoiteDialogue(){
+        this.sendData = false;
+
+        //Début du dialog
         this.setVisible(true);
+
+        //Le dialogue prend fin
+        //Si on a cliqué sur OK, on envoie, sinon on envoie une chaîne vide !
+        return (this.sendData)? jtf.getText() : "";
+
     }
 }
